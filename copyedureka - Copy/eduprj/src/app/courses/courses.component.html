@@ -1,0 +1,32 @@
+<h2 >{{heading}}</h2>
+<ul class="courses">
+    <li *ngFor="let course of course"
+        [ngClass]="course == selectedCourse ? 'selected': ''"
+    (click)=onSelect(course)>
+    <span class="badge">{{course.id}}: </span>
+    {{course.name}}
+    </li>
+</ul>
+ <app-course-detail [course]="selectedCourse" (btnClick)="eventListener($event)"></app-course-detail>
+<textarea type="text" [(ngModel)]='heading'> </textarea>
+<div class="output_result">
+  {{chkproperty}}
+</div>
+{{getDate()| date:'full'}}
+<button (click)="publishData(selectedCourse)">publish</button>
+<!--
+    [class.selected]="course === selectedCourse"-->
+
+<button (click)="CHK()"> CHCK COVID</button>
+
+<ul >
+  <p> <b>COVID COUNTRIES</b></p>
+  <li *ngFor="let item of covid">
+    <div >{{item.Country}}
+     <div>{{item.CountryCode}}
+     </div>
+     <div>{{item.TotalConfirmed}}
+     </div>
+    </div>
+  </li>
+</ul>

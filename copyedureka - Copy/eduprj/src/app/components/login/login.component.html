@@ -1,0 +1,33 @@
+<div >
+
+  <div class="maindiv">
+    <form [formGroup]="formGroup1">
+
+      <input
+        class="input_text"
+        type="text"
+        placeholder="Enter your username"
+        formControlName="username"
+      >
+
+      <input
+        class="input_text"
+        type="password"
+        placeholder="Enter your Password"
+        formControlName="password">
+
+      <div class="mybuttons">
+
+        <button mat-button
+                class=" startSession" (click)="submit(formGroup1)"
+                [disabled]="formGroup1.invalid">Start Session
+        </button>
+
+      </div>
+    </form>
+
+  </div>
+
+
+</div>
+

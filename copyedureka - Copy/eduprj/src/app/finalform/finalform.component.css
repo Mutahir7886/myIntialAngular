@@ -1,0 +1,25 @@
+table {
+  min-width: 80% !important;
+  margin: auto;
+}
+
+.btn-info{
+  margin-right: 20px;
+}
+
+.mat-button.mat-primary{
+  color: purple;
+}
+
+.mat-table {
+  font-family: "Arial Black";
+  color:purple ;
+}
+
+/*.mat-table.ABC {*/
+/*  background-color: red;*/
+/*}*/
+
+/*.mat-header-cell{*/
+/*  color:yellow ;*/
+/*}*/

@@ -1,0 +1,45 @@
+<h4 style="color: red;font-size: 20px"> List of all Courses</h4>
+<div>
+  <a *ngFor="let i of course"
+     routerLink="/details/{{i.id}}" style="color: blue">
+    <div>
+      <h4>{{i.name}}</h4>
+    </div>
+  </a>
+
+</div>
+<!--<div class='form-class'>-->
+
+<!--  <form #form="ngForm" *ngIf="!isExists">-->
+<!--    <input type="text" placeholder="email" [(ngModel)]="emaill" name='email' required>-->
+<!--    <input type="password" placeholder="password" [(ngModel)]="passwordd" name='password' required>-->
+<!--    <button (click)="submit(form)" [disabled]="form.invalid"> submit</button>-->
+<!--    <div *ngIf="form.invalid && form.dirty">Invalid form</div>-->
+<!--  </form>-->
+
+
+<!--&lt;!&ndash;  <div *ngIf="isExists">Authenticated</div>&ndash;&gt;-->
+
+<!--</div>-->
+<h4 *ngIf="!isExists" style="margin-top: 20px;color: darkred"> Enter Login Email and password for Authentication</h4>
+<div class='form-class1'>
+
+  <form [formGroup]="formGroup" *ngIf="!isExists">
+    <input type="text" placeholder="email" formControlName="email" maxlength="
+12">
+    <p *ngIf="email.invalid && (email.dirty || email.touched)" style="color: red">email is invalid</p>
+    <input type="password" placeholder="password" formControlName="password">
+    <button class="btn btn-success"  (click)="submit(formGroup)" [disabled]="formGroup.invalid"> submit1</button>
+    <input type="file" placeholder="image" formControlName="image" >
+  </form>
+  <div class="show" *ngIf="isExists">The following user is Authenticated</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4" style="background-color:orange;" *ngIf="email.value">Email {{email?.value}}</div>
+      <div class="col-sm-4" style="background-color:green"  *ngIf="password.value">Password {{password?.value}}</div>
+
+    </div>
+  </div>
+</div>
+
+<div>ANCADSA</div>

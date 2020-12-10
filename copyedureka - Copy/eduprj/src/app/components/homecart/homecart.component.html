@@ -1,0 +1,47 @@
+<!--<p> USer Logged in {{userlogged}}</p>-->
+
+
+<div class="viewcartbox">
+  <div>
+    <h1 class="hover-action1" style="color: white;margin-top: 25px;margin-left: 40px">DevStudio</h1>
+  </div>
+  <div>
+    <form [formGroup]="homecartform">
+    <input
+           class="input_text hover-action "
+           style="margin-left: 120px;color: black"
+           type="search"
+           placeholder="search for products"
+           formControlName="Search">
+  </form>
+  </div>
+  <div>
+    <button mat-button    class="btn btn-success hover-action" (click)="showhistory()">User History</button>
+  </div>
+  <div>
+    <button mat-button    class="btn btn-success hover-action"  (click)="showuserdetails()"> User details</button>
+  </div>
+  <div>
+  <button mat-button  class="btn btn-success hover-action"  (click)="viewcart()"> User Cart<span style="color: #C400D7">...</span></button>
+  </div>
+  <div>
+    <i class="fa fa-shopping-cart" style="font-size:28px;color:white;margin-top:28px;margin-left: 200px"><sub style="color: red">{{selecteditems.length}}</sub> </i>
+  </div>
+
+</div>
+
+<div class="maindiv">
+  <div [ngClass]="item.isSelected?'selectedPrd':'NotselectedProduct'" class="cart_items" *ngFor="let item of dispArray">
+    <img class="hover-action3" src="{{item.Image}}" (click)="openImage(item.Image)" >
+    <h2>{{item.ProductName}}</h2>
+    <p>{{item.ProductPrice}} /-</p>
+    <button  mat-button  class="primary hover-action" (click)="addtocart(item)">Add to Cart</button>
+<!--    <button style="background-color:navy " class="btn btn-success" (click)="addtocart(item)"> ADD</button>-->
+    <button   mat-button   class="primary1 hover-action" (click)="removefromcart(item)"> Remove cart</button>
+  </div>
+</div>
+<div style="justify-content: center;display: flex;margin-top: 230px">
+  <div *ngIf="!dataloaded" class="loader" >
+  </div>
+</div>
+<br>

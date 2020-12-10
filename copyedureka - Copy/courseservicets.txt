@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import {COURSES} from './mock-courses'
+import {Course} from './course'
+import {Observable ,of} from 'rxjs'
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CourseService {
+
+  getCourses():Course[]{
+    return COURSES;
+  }
+  constructor() { }
+}

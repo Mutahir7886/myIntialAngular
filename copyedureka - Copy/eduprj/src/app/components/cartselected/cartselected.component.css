@@ -1,0 +1,60 @@
+
+table {
+  width: 80% !important;
+  margin: auto;
+}
+.btn-success{
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.mat-table thead tr th{}
+.mat-table tbody tr td{}
+
+.mat-table tr td img{
+  width: 100px !important;
+  height: 150px !important;
+  border-radius: 80%;
+  object-fit: cover;
+}
+
+/*.mat-table tr:nth-child(2n+2){*/
+/*  background: #ddd;*/
+/*}*/
+
+.orderdiv{
+  max-width: 390px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 450px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #2d0036;
+}
+
+.card-container {
+  background-color: #231E39;
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+  color: #B3B8CD;
+  padding: 30px 0 0;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+  margin-left: 30px;
+
+}
+
+.mat-table tr td img{
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.addbutton{
+  background-color:  #3f51b5;
+}

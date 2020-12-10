@@ -1,0 +1,80 @@
+.userImage {
+  padding: 30px;
+}
+
+.useremail{
+  padding: 10px;
+}
+
+.userFirstName{
+  padding: 10px;
+
+}
+
+.userLastName{
+  padding: 10px;
+}
+.card-container {
+  background-color: #231E39;
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+  color: #B3B8CD;
+  padding: 30px 0 0;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+
+.card-container img {
+  border: 1px solid #C400D7;
+  border-radius: 50%;
+  padding: 7px;
+  height: 150px;
+  width: 150px;
+}
+
+button.primary {
+  background-color: #C400D7;
+  border: 1px solid #C400D7;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #C400D7;
+}
+
+.body1 {
+  background-image: linear-gradient(to right top, #2d0036, #4f015b, #730283, #9a02ac, #C400D7);
+  font-family: Montserrat, sans-serif;
+  background-color: #9a02ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+.input_text {
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: 2px solid black;
+  box-sizing: content-box;
+  border-radius: 5px;
+}

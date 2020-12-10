@@ -1,0 +1,132 @@
+<div class='form-class1'>
+  <form [formGroup]="formGroup">
+
+    <div style="font-weight: bold;margin-left: 20px;margin-top: 30px"> Select Users</div>
+
+    <ng-select class="ABC" [items]="UserList2" formControlName="users"
+               bindLabel="item_text"
+               bindValue="item_text"
+               placeholder="Select user"
+               [multiple]="true"
+               (add)="ONUserSelect($event)"
+               (remove)="ONUserRemove($event)"
+    >
+    </ng-select>
+    <div [ngClass]="currentSelected==i?'selected2':''"  class="myusers" *ngFor="let user of formGroup.get('users').value;let i=index"  (click)="currentSelected = i">
+      <label  style="text-align:center;margin-left: 15px" class="ad"> {{user}} </label>
+    </div>
+    <div *ngFor="let item of usersArray.controls; let i = index">
+      <div *ngIf="currentSelected == i"  >
+      <form  [formGroup]="item">
+
+        <div>
+          <label class="mylabels"  *ngIf="checkthesubject"> SUBJECT
+            <input class="input_class" *ngIf="checkthesubject" type="text" placeholder="Type your Subject" formControlName="subject">
+          </label>
+        </div>
+
+        <div>
+          <label class="mylabels"  *ngIf="checkthemessage"> Message to email
+            <input class="mylabels" *ngIf="checkthemessage" type="text" placeholder="Type your Message" formControlName="message">
+          </label>
+        </div>
+
+        <label class="mylabels" > Number</label>
+        <input style="margin-left:75px"  formControlName="number" maxlength="12" placeholder="Input Number">
+        <div style="color: red;margin-left: 20px"> Number format 923*********</div>
+        <div style="color: green;margin-left: 20px">Number entered after Masking: {{item.get('number').value|mask:mymask }}</div>
+
+
+        <p style="margin-left: 20px;margin-top:40px;font-weight: bold"> Select Reasons</p>
+
+        <ng-select class="ABC" [items]="reasoons" formControlName="reasons"
+                   placeholder="Select Reasons"
+                   [multiple]="true"
+                   (add)="ONReasonSelect($event)"
+                   (remove)="ONReasonRemove($event)"
+        >
+        </ng-select>
+
+        <div>
+          <button class="btn btn-primary" style="margin-left: 20px;margin-top: 20px" (click)="openModal(content2)"> Collect Location</button>
+        </div>
+        <ng-template #content2 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">GOOGLE LOCATION</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <agm-map
+              [latitude]="lat"
+              [longitude]="lng"
+              [zoom]="zoom"
+              [disableDefaultUI]="false"
+              (mapClick)="mapClicked($event)">
+              <agm-marker
+                *ngFor="let m of markers; let i = index"
+                (markerClick)="clickedMarker(m.label, i, m.lat, m.lng)"
+                [latitude]="m.lat"
+                [longitude]="m.lng"
+                [label]="m.label"
+                [markerDraggable]="m.draggable"
+                [iconUrl]="'//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"
+                (dragEnd)="markerDragEnd(m, $event)">
+                <agm-info-window>
+                  <strong>InfoWindow content</strong>
+                  <strong>The Latitude of the marked place: </strong> {{latmarked}}
+                  <br>
+                  <strong>The Longitude of the marked place: </strong> {{lngmarked}}
+                  <strong>The label of Marked Location: </strong> {{labelmarked}}
+                </agm-info-window>
+              </agm-marker>
+
+              <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
+                          [radius]="50"
+                          [fillColor]="'blue'"
+                          [circleDraggable]="true"
+                          [editable]="true">
+              </agm-circle>
+
+            </agm-map>
+            <button (click)="donelocation(i)"> SUBMIT LOCATION</button>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </ng-template>
+
+        <div style="text-align:left;margin-top: 20px;margin-bottom: 20px;margin-left: 20px">
+          <a (click)="initiateRecording(i)" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+          <a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+        </div>
+
+        <div style="text-align:center;margin-top: 20px">
+          <button class="btn btn-success" (click)="submit(formGroup)"
+                  [disabled]="formGroup.invalid"> submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+    </div>
+
+
+<!--    <p style="margin-left: 20px;font-weight: bold"> Select Reasons</p>-->
+
+<!--    <br>-->
+
+<!--    <ng-select class="ABC" [items]="reasoons" formControlName="reasons"-->
+<!--               placeholder="Select Reasons"-->
+<!--               [multiple]="true"-->
+<!--               (add)="ONReasonSelect($event)"-->
+<!--               (remove)="ONReasonRemove($event)"-->
+<!--    >-->
+<!--    </ng-select>-->
+
+
+
+  </form>
+</div>
+
+

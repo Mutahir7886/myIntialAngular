@@ -1,0 +1,112 @@
+<div class="body1">
+<!--<p style="margin-bottom: 40px;text-align: right">  User logged in &#45;&#45; {{userlogg}} </p>-->
+<table *ngIf="dataloaded" style="margin-top: 50px" mat-table  [dataSource]="matData" class="mat-elevation-z8 ABC" >
+  <ng-container matColumnDef="OrderID">
+    <th style="color: white" mat-header-cell class="namecalss"  *matHeaderCellDef> ORDER ID</th>
+
+    <td mat-cell *matCellDef="let element"> {{element.orderkey}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="OrderPrice">
+    <th style="color: white"   mat-header-cell class="namecalss"  *matHeaderCellDef> ORDER PRICE</th>
+    <td mat-cell *matCellDef="let element"> {{element.price}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="OrderTime">
+    <th style="color: white"  mat-header-cell class="namecalss"  *matHeaderCellDef> Order Time</th>
+    <td mat-cell *matCellDef="let element"> {{element.time}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Action">
+    <th style="color: white"  mat-header-cell *matHeaderCellDef>Details</th>
+    <td mat-cell *matCellDef="let element;let i =index">
+<!--       <span style="color:greens " (click)="openModal2(element,content_order, i)"> Show Details </span>-->
+<!--      <button  class="primary" (click)="openModal2(element,content_order, i)">-->
+<!--        Show Details-->
+<!--      </button>-->
+      <i matTooltip="Details of orders" class="fa fa-info hover-action" style="font-size:36px;color: #231E39;" (click)="openModal2(element,content_order, i)"></i>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="selectstatus">
+    <th  style="color: white"  mat-header-cell *matHeaderCellDef>  Select Status</th>
+    <td mat-cell *matCellDef="let element;let i =index">
+      <ng-select class="ABC hover-action " [items]="StatusList"
+                 matTooltip="Select Order Status"
+                 bindLabel="item_text"
+                 bindValue="item_text"
+                 placeholder="Select Status"
+                 [clearable]="false"
+                 [(ngModel)]="element.status"
+                 (change)="ONStatusSelect($event,element)"
+      >
+      </ng-select>
+    </td>
+  </ng-container>
+<!--  <ng-container matColumnDef="Proceed">-->
+<!--    <th mat-header-cell *matHeaderCellDef>Proceed Order</th>-->
+<!--    <td mat-cell *matCellDef="let element;let i =index">-->
+<!--      <button style="margin-left: 20px" class="btn btn-info" (click)="openModal3(element,finalorder, i)">-->
+<!--        Proceed-->
+<!--      </button>-->
+<!--    </td>-->
+<!--  </ng-container>-->
+
+  <tr style="background-color: #2d0036;color: white" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr  mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div style="justify-content: center;display: flex;margin-top: 100px">
+  <div *ngIf="!dataloaded" class="loader" >
+  </div>
+</div>
+
+<ng-template #content_order let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Row update</h4>
+
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let innerorders of myelementkey; let i = index;">
+      <br>
+      <h1 style="font-weight: bold">Order Key - {{innerorders}} </h1>
+      <p> <b>Order Status </b> : {{status}}</p>
+      <div *ngFor="let item1 of myelementorders; let j = index;">
+
+        <div  *ngIf="i === j">
+          <div *ngFor="let inner of item1">
+            <p><b>Product Name </b> : {{inner.ProductName}}</p>
+            <p> <b>Product Price </b> :{{inner.ProductPrice}}</p>
+            <p> <b>Product Quantity </b> : {{inner.quantityitem}}</p>
+
+            <br>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+
+    <button type="button" class="btn btn-outline-dark" (click)=close()>YES</button>
+
+  </div>
+</ng-template>
+
+<!--<ng-template #finalorder let-modal>-->
+<!--<div class="modal-header">-->
+<!--  <h4 class="modal-title" id="modal-basic-title">Row update</h4>-->
+
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--  <h1> Are you sure you want to proceed the order ?</h1>-->
+
+<!--</div>-->
+<!--<div class="modal-footer">-->
+
+<!--  <button type="button" class="btn btn-outline-dark" (click)=proceedreq()>YES</button>-->
+<!--  <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">NO</button>-->
+<!--</div>-->
+<!--</ng-template>-->
+</div>

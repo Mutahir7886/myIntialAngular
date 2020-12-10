@@ -1,0 +1,25 @@
+<!--<div *ngIf="logged">-->
+<!--  <p>USER ID OF LOGGED IN USER</p>-->
+<!--  <p> USER EMAIL : {{logged?.email}}</p>-->
+
+
+<!--  <p> USER FIRST : {{logged?.Firstname}}</p>-->
+
+<!--  <p> USER LASTNAME : {{logged?.Lastname}}</p>-->
+<!--</div>-->
+
+
+<!--<button class="btn btn-success" (click)="signout()">signout-->
+<!--</button>-->
+
+<div class="body1">
+  <div class="card-container">
+    <h3>{{logged?.Firstname}} - {{logged?.Lastname}} just logged in </h3>
+    <h2>{{logged?.email}}</h2>
+    <div class="buttons">
+      <button class="primary" (click)="signout()">
+        signout
+      </button>
+    </div>
+  </div>
+</div>

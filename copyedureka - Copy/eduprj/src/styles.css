@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+.saving span {
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  border-radius: 50%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: 0 3px;
+}
+.saving span:nth-child(2) {
+  animation-delay: .2s;
+}
+.saving span:nth-child(3) {
+  animation-delay: .4s;
+}
+
+.loader {
+  border: 16px solid navy;
+  border-radius: 50%;
+  border-top: 16px solid white;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.loader1 {
+  border: #231E39;
+  border-radius: 50%;
+  border-top: 16px solid white;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.hover-action:hover {
+  transform: scale(1.2);
+}
+
+.hover-action1:hover {
+  transform: scale(1.6);
+}
+
+.hover-action2:hover {
+  transform: scale(2.6);
+}
+
+.hover-action3:hover {
+  transform: scale(1.3);
+}

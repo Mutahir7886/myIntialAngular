@@ -1,0 +1,88 @@
+<!--<div class="card-container">-->
+<!--  <img [src]="userImage" alt="" *ngIf="userImage">-->
+<!--  <h3>{{userfirstname}}-{{userlastname}}</h3>-->
+<!--  <p>{{useremail}}</p>-->
+<!--  <div class="buttons">-->
+<!--    <button class="primary">-->
+<!--      Edit Profile-->
+<!--    </button>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+<div class="body1">
+  <div class="card-container">
+    <img [src]="userImage" alt="" *ngIf="userImage">
+    <h3>{{userfirstname}}-{{userlastname}}</h3>
+    <p>{{useremail}}</p>
+    <div class="buttons">
+      <button class="primary" (click)="openModal3(userinfo)">
+        Edit Profile
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!--<button style="margin-left: 20px" class="btn btn-info" (click)="openModal3(userinfo)">-->
+<!--  <span class="glyphicon glyphicon-remove"></span>-->
+<!--  EDIT-->
+<!--</button>-->
+
+<ng-template #userinfo let-modal>
+  <div class="modal-header">
+    <h4 style="margin-top: 20px" class="modal-title" id="modal-basic-title">Profile Info update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="userformgroup">
+
+      <div class="maindiv">
+        <label> Enter First Name </label>
+        <br>
+        <input
+          class="input_text"
+          type="text"
+          placeholder="Enter your First Name"
+          formControlName="FirstName">
+         <br>
+        <label> Enter last Name </label>
+        <br>
+        <input
+          class="input_text"
+          type="text"
+          placeholder="Enter your Last Name"
+          formControlName="LastName">
+        <br>
+        <label> Enter Email</label>
+        <br>
+        <input
+          class="input_text"
+          type="email"
+          placeholder="Enter your Email"
+          formControlName="Email">
+
+        <br>
+
+        <label> Enter Image</label>
+        <br>
+        <img
+          class="input_text"
+          [src]="Image.value" *ngIf="Image.value">
+        <br>
+        <input type="file" (change)="readUrl($event)"
+               style="height: 20%;width: 20%">
+
+        <br>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button style="margin-top: 20px" class="btn btn-success" (click)="submit(userformgroup)"
+    >Done
+    </button>
+  </div>
+</ng-template>

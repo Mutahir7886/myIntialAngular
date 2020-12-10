@@ -1,0 +1,129 @@
+<p style="text-decoration: underline;cursor: pointer;float: right" (click)=logout()>logout</p>
+<h1 class="headings">ZAITOON </h1>
+<form [formGroup]="formGroup1">
+  <h3 class="headings">City</h3>
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your name"
+    formControlName="name"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your region"
+    formControlName="region"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your area"
+    formControlName="area"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your location"
+    formControlName="location"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your zone"
+    formControlName="zone"
+  >
+  <h3 class="headings">Store</h3>
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your storeName"
+    formControlName="storeName"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your ownerName"
+    formControlName="ownerName"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your contact"
+    formControlName="contact"
+  >
+  <h3 class="headings">Store Category</h3>
+
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your storeCategoryName"
+    formControlName="storeCategoryName"
+  >
+  <h3 class="headings">Image</h3>
+
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter your name"
+    formControlName="visitImage"
+  >
+  <h3 class="headings">Additional Info</h3>
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter name of competing_brands"
+    formControlName="competing_brands"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter name of recommended_products"
+    formControlName="recommended_products"
+  >
+  <input
+    class="input_text"
+    type="text"
+    placeholder="Enter notes"
+    formControlName="notes"
+  >
+  <h3 class="headings">Products</h3>
+
+<!--  <button mat-button-->
+<!--          class="mybuttons"-->
+<!--          (click)="addProducts()">-->
+<!--    Add Products-->
+<!--  </button>-->
+  <ng-select class="adjustor" [items]="ProductList" formControlName="productIds"
+             bindLabel="item_text"
+             bindValue="item_id"
+             placeholder="Select Products"
+             [multiple]="true"
+             (add)="OnProductSelect($event)"
+             (remove)="OnProductRemove($event)"
+  >
+  </ng-select>
+
+  <div *ngFor="let item of productQuantity.controls; let i = index">
+      <form [formGroup]="item">
+        <h4 class="headings">{{productListHeadings[i]}}</h4>
+        <input
+          class="input_text"
+          type="text"
+          placeholder="Enter your product Quantity"
+          formControlName="productQuantity"
+        >
+
+
+      </form>
+  </div>
+  <div class="mybuttons">
+
+    <button mat-button
+            class=" startSession" (click)="submit(formGroup1)"
+            [disabled]="formGroup1.invalid">Start Session
+    </button>
+
+
+
+  </div>
+</form>

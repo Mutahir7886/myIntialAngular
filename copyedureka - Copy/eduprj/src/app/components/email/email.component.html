@@ -1,0 +1,126 @@
+<div class='form-class1'>
+  <form [formGroup]="formGroup">
+
+
+    <label class="styleL" *ngIf="checkthesubject" > SUBJECT
+      <input *ngIf="checkthesubject" type="text" placeholder="Type your Subject" formControlName="subject">
+    </label>
+
+    <label class="styleL" *ngIf="checkthemessage" > Message to email
+      <input *ngIf="checkthemessage" type="text" placeholder="Type your Message" formControlName="message">
+    </label>
+
+    <p class="styleP" *ngIf="checkthemessage" > Number</p>
+    <input style="margin-left: 20px" formControlName="number" maxlength="12">
+    <div style="color: red;margin-left: 20px"> Number format 923*********</div>
+    <div style="color: green;margin-left: 20px" >Number entered after Masking{{number.value|mask:mymask }}</div>
+    <div style="font-weight: bold;margin-left: 20px;margin-top: 30px"> Select Users</div>
+
+
+    <select style="margin-left: 20px" formControlName="users" (change)="selectmyuser()">
+      <option class="Abc" value="none" selected>
+        Select a User
+      </option>
+      <option *ngFor="let item of MyUser" [attr.disabled]="check(item)" >
+        {{item}}
+      </option>
+    </select>
+
+    <div style="margin-left: 20px" *ngFor="let user of selectedUsers">
+      <div *ngIf="!isExist">
+        Selected Users:  {{user}}
+      </div>
+    </div>
+
+    <p style="margin-left: 20px;font-weight: bold"> Select Reasons</p>
+    <select style="margin-left: 20px" formControlName="reasons" (change)="selectmyreason()">
+      <option value="none" selected>
+        Select a Reason
+      </option>
+      <option *ngFor="let item of reasoons" [attr.disabled]="check2(item)">
+        {{item}}
+      </option>
+    </select>
+
+    <div style="margin-left: 20px" *ngFor="let reasons of selectedReasons">
+      <div *ngIf="!isExist">
+        Selected Reasons:  {{reasons}}
+      </div>
+    </div>
+
+    <br>
+
+    <button style="margin-left: 20px;margin-top: 20px" class="btn btn-success" (click)="submit(formGroup)"
+            [disabled]="formGroup.invalid"> submit
+    </button>
+  </form>
+</div>
+
+
+<!--<p> Select Reason </p>-->
+<!--<select class="selectinput" [(ngModel)]="ReasonSelected"  (click)="selectReason()">-->
+<!--  <option *ngFor="let item of reason"  >-->
+<!--    {{item}}-->
+<!--  </option>-->
+<!--</select>-->
+
+<!--<h3> The users selected are : <b>{{ReasonSelected}}</b></h3>-->
+
+<!--<select  class="selectinput" [(ngModel)]="UserSelected"  (ngModelChange)="onUserSelected($event)" >-->
+<!--  <option value="none" selected >-->
+<!--    Select an Option-->
+<!--  </option>-->
+<!--  <option  *ngFor="let item of MyUser" [value]="item"  >-->
+<!--    {{item}}-->
+<!--  </option>-->
+<!--</select>-->
+
+<!--  <h2>The BODY</h2>-->
+<!--<div>-->
+
+<!--  <div> Message : {{message.value}}</div>-->
+<!--  <div> Subject : {{subject.value}}</div>-->
+<!--  <div> Reason Selected : {{reasons.value}}</div>-->
+<!--  <div> User Selected : </div>-->
+<!--  <div *ngFor="let user of selectedUsers">-->
+<!--    {{user}}-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<table mat-table [dataSource]="matData" class="mat-elevation-z8">-->
+<!--  <ng-container matColumnDef="Users">-->
+<!--    <th mat-header-cell *matHeaderCellDef> Users</th>-->
+<!--    <td mat-cell *matCellDef="let element"> {{element.Users}}</td>-->
+
+<!--  </ng-container>-->
+<!--  <ng-container matColumnDef="Message">-->
+<!--    <th mat-header-cell *matHeaderCellDef> Message</th>-->
+<!--    <td mat-cell style="color: green" *matCellDef="let element">{{element.message}} </td>-->
+<!--  </ng-container>-->
+<!--  <ng-container matColumnDef="Subject">-->
+<!--    <th mat-header-cell *matHeaderCellDef> Subject</th>-->
+<!--    <td mat-cell style="color: green" *matCellDef="let element">{{element.subject}} </td>-->
+<!--  </ng-container>-->
+
+<!--  <ng-container matColumnDef="Reason">-->
+<!--    <th mat-header-cell *matHeaderCellDef> Reason</th>-->
+<!--    <td mat-cell style="color: green" *matCellDef="let element">{{element.reason}} </td>-->
+<!--  </ng-container>-->
+<!--  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+<!--  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
+<!--</table>-->
+
+<!--<h2>-->
+<!-- Reasons Selected :  {{reasoons}}-->
+<!--</h2>-->
+
+
+<!--<ng-multiselect-dropdown-->
+<!--  [placeholder]="'custom placeholder'"-->
+<!--  [settings]="dropdownSettings"-->
+<!--  [data]="dropdownList2"-->
+<!--  (onSelect)="onItemSelect($event)"-->
+<!--  (onDeSelect)="onItemDeSelect($event)"-->
+<!--&gt;-->
+<!--</ng-multiselect-dropdown>-->

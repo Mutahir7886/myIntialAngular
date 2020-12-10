@@ -1,0 +1,46 @@
+<div class="ABCACA">
+<form [formGroup]="formGroup">
+<p style="color: black;font-weight: bold;font-size: 20px">CONFIG Message</p>
+<p class="checkbox">
+  <input type="radio" [value]="true" formControlName="checkmessage" (change)="changeGlobalmessage()" > ON
+  <input type="radio" [value]="false" formControlName="checkmessage" (change)="changeGlobalmessage()"> OFF
+</p>
+<p style="color: black;font-weight: bold;font-size: 20px">CONFIG Subject</p>
+<p class="checkbox">
+  <input type="radio" [value]="true"  formControlName="checksubject" (change)="changeGlobalsubject()"> ON
+  <input type="radio" [value]="false" formControlName="checksubject" (change)="changeGlobalsubject()"> OFF
+</p>
+  <p style="color: black;font-weight: bold;font-size: 20px">ADD REASONS</p>
+
+  <input type="text" formControlName="reason_dynamic" >
+  <br>
+  <p *ngIf="reason_dynamic.invalid" style="color: red">Add Reasons according to requirment</p>
+  <button class="btn btn-info" (click)="addreason()" [disabled]="formGroup.invalid"  > ADD Reasons</button>
+  <br>
+  <div  style="margin-top: 20px" *ngFor="let reasons of dynamicreasons">
+<!--    //<button (click)="deleteReason(reasons)"> Delete</button>-->
+    <button  class="btn btn-info" (click)="openModal2(content2,reasons)">
+    DELETE
+    </button >
+    Added Reasons:  {{reasons}}
+  </div>
+</form>
+</div>
+<ng-template #content2 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">REASON MENU</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>THIS REASON IS ALREADY BEING USED.</h2>
+    <h2>ARE YOU SURE YOU WANT TO DELETE</h2>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)=deleteReason()>DELETE REASON</button>
+    <button type="button" class="btn btn-outline-dark" (click)=deleteReasonMessage()>DELETE REASON WITH MESSAGE</button>
+  </div>
+</ng-template>
+

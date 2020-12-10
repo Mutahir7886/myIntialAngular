@@ -1,0 +1,101 @@
+<!--<nav class="navbar navbar-inverse">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="navbar-header">-->
+<!--      <a class="navbar-brand" href="">ANGULAR</a>-->
+<!--    </div>-->
+<!--    <ul class="nav navbar-nav">-->
+<!--      <li><a routerLink="/dashboard">Dashboard</a></li>-->
+<!--      <li><a routerLink="/courses">Courses</a></li>-->
+<!--      <li><a routerLink="/shop">Shop</a></li>-->
+
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+<ul style="color: red" ngbNav #nav="ngbNav" class="nav-tabs" >
+  <li class="anc" ngbNavItem>
+    <a ngbNavLink routerLink="/courses" >Courses</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/shop">SHOP</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/dashboard" >Dashboard</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/friday" >FinalForm</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/covid" >COVID</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/email" >Email</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/table" >Table</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/config" >config</a>
+  </li>
+  <li ngbNavItem>
+  <a ngbNavLink routerLink="/ngmultiselect" >ngmultiselect</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/ngselect" >ngselect</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/audiorecord" >audiorecord</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/googlemaps" >google</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/sidebar" >Sidebar</a>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/selectuser" >SELECT USER</a>
+  </li>
+  <li ngbNavItem *ngIf="!isNotLoggedIn">
+    <a ngbNavLink routerLink="/signup" >SIGNUP</a>
+  </li>
+  <li ngbNavItem *ngIf="!isNotLoggedIn">
+    <a ngbNavLink routerLink="/login" >LOGIN</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/homepage" >HOMEPAGE</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/AdminProducts" >AdminProducts</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/homecart" >Homecart</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/cartselected" >VIEWCART</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/admindashboard" >AdminDashboard</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/userhis" >USER HISTORY</a>
+  </li>
+  <li   ngbNavItem>
+    <a  ngbNavLink routerLink="/userprofile" >USER Profile</a>
+  </li>
+</ul>
+<div style="background-color: red" [ngbNavOutlet]="nav"></div>
+<!--<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">-->
+<!--  <mat-icon>more_vert</mat-icon>-->
+<!--</button>-->
+<!--<mat-menu #menu="matMenu">-->
+<!--  <button mat-menu-item>-->
+<!--    <span routerLink="/userprofile">Redial</span>-->
+<!--  </button>-->
+<!--  <button mat-menu-item disabled>-->
+<!--    <span>Check voice mail</span>-->
+<!--  </button>-->
+<!--  <button mat-menu-item>-->
+<!--    <span>Disable alerts</span>-->
+<!--  </button>-->
+<!--</mat-menu>-->
+<!-- <app-courses></app-courses> -->
+<router-outlet></router-outlet>

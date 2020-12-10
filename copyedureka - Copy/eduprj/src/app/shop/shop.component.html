@@ -1,0 +1,37 @@
+<div class='form-class1'>
+
+  <form [formGroup]="formGroup" *ngIf="!isExxists" >
+    <p class="headings"> TITLE</p>
+    <input type="text" placeholder="Enter the Title" formControlName="title" maxlength="12">
+    <p *ngIf="title.invalid" style="color: red">Title is invalid</p>
+    <p class="headings"> POINTS</p>
+    <input type="number" placeholder="Enter the Points" formControlName="points" min="1" max="100">
+    <p *ngIf="points.value>100||points.value!<0" style="color: red">Points must be below 100</p>
+    <p class="headings" *ngIf="quantity.value=='Limited'"> QUANTITY</p>
+    <p class="checkbox">
+      <input type="radio" [value]="false" formControlName="quantity_check"> Unlimited
+      <input type="radio" [value]="true" formControlName="quantity_check"> Limited
+    </p>
+    <input *ngIf="quantity_check.value" type="text" placeholder="STOCK VALUE" formControlName="quantity">
+    <p *ngIf="quantity.value<0||quantity.value>1000" style="color: red">Quantity must be below 1000</p>
+    <!--    <p *ngIf="quantity.invalid&&quantity.hasError('required')" style="color: red">Quantity is requireds</p>-->
+    <p class="headings">UPLOAD PICTURE HERE</p>
+    <div >
+    <img [src]="imageValue" alt="" *ngIf="imageValue" style="height: 50%;width: 50%;border-radius: 50%"></div>
+    <input type="file" placeholder="image" formControlName="image" (change)="readUrl($event)">
+    <p class="headings">ENTER DATE HERE</p>
+    <input type="date" placeholder="Enter date"  [min]="min"  formControlName="date">
+    <button class="btn btn-success" (click)="submit(formGroup)"
+            [disabled]="formGroup.invalid || points.value>100||expire_date.invalid">submit1
+    </button>
+
+  </form>
+  <div *ngIf="isExxists">
+    <p> TITLE : {{title.value}}</p>
+    <p> POINTS : {{points.value}}</p>
+    <p> Quantity : {{quantity.value}}</p>
+    <p> DATE : {{min}}</p>
+    <img [src]="imageValue" alt="" *ngIf="imageValue" style="height: 50%;width: 50%;border-radius: 50%">
+  </div>
+</div>
+

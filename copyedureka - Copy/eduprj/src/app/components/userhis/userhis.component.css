@@ -1,0 +1,25 @@
+table {
+  width: 80% !important;
+  margin: auto;
+  margin-top: 150px;
+
+
+}
+
+
+.body1 {
+  background-image: linear-gradient(to right top, #2d0036, #4f015b, #730283, #9a02ac, #C400D7);
+  font-family: Montserrat, sans-serif;
+  background-color: #9a02ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+.tableheaderstyling{
+  color: white;
+}

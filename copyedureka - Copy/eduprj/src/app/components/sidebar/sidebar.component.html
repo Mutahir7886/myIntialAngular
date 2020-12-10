@@ -1,0 +1,48 @@
+<div class="d-flex">
+  <ul [(activeId)]="active" ngbNav #nav="ngbNav" class="nav-pills " orientation="vertical">
+    <li class="anc" ngbNavItem="top">
+      <a ngbNavLink>Page 1</a>
+      <ng-template ngbNavContent>
+        <app-config></app-config>
+      </ng-template>
+    </li>
+    <li ngbNavItem="middle">
+      <a ngbNavLink>Page 2</a>
+      <ng-template ngbNavContent>
+        <app-emailselectmethod></app-emailselectmethod>
+      </ng-template>
+    </li>
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>Page 3</a>
+      <ng-template ngbNavContent>
+        <app-tabledata></app-tabledata>
+      </ng-template>
+    </li>
+
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</div>
+<!-- <app-courses></app-courses> -->
+
+<!--<div class="d-flex">-->
+<!--  <ul [(activeId)]="active" style="color: red" ngbNav #nav="ngbNav" class="nav-pills " orientation="vertical">-->
+<!--    <li class="anc" ngbNavItem="top">-->
+<!--      <a  ngbNavLink  >Table</a>-->
+<!--      <ng-template ngbNavContent>-->
+<!--        <app-tabledata></app-tabledata>-->
+<!--      </ng-template>-->
+<!--    </li>-->
+<!--    <li ngbNavItem="middle">-->
+<!--      <ng-template ngbNavContent>-->
+<!--        <app-config> </app-config>-->
+<!--      </ng-template>  </li>-->
+<!--    <li ngbNavItem="bottom" >-->
+<!--      <ng-template ngbNavContent>-->
+<!--        <app-emailselectmethod></app-emailselectmethod>-->
+<!--      </ng-template>-->
+<!--    </li>-->
+
+<!--  </ul>-->
+<!--  <div style="background-color: red" [ngbNavOutlet]="nav"></div>-->
+<!--</div>-->
+<!--&lt;!&ndash; <app-courses></app-courses> &ndash;&gt;-->

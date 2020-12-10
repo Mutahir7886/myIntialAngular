@@ -1,0 +1,38 @@
+table {
+  width: 80% !important;
+  margin: auto;
+}
+.input_text {
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: 2px solid black;
+  box-sizing: content-box;
+  border-radius: 5px;
+}
+.mat-table tr td img{
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.addproducts{
+  color: white;
+  font-size: 30px;
+}
+
+.btn-info{
+  background-color: navy;
+  color: white;
+
+}
+
+.tablest{
+ width: 30px;
+  color: white
+}

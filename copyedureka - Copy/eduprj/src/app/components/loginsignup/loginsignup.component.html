@@ -1,0 +1,91 @@
+<form [formGroup]="formGroup">
+
+  <div class="maindiv">
+    <h1 style="text-align: center;color: white">SIGN UP</h1>
+      <input
+        class="input_text"
+        type="text"
+        placeholder="Enter your First Name"
+        formControlName="first_name">
+
+
+      <input
+        class="input_text"
+        type="text"
+        placeholder="Enter your Last Name"
+        formControlName="last_name">
+
+
+      <input
+        class="input_text"
+        type="email"
+        placeholder="Enter your Email"
+        formControlName="email">
+      <p *ngIf="email.invalid && (email.dirty || email.touched)"
+         style="color: red;text-align: center"><b>EMAIL IS INVALID(xyz@**.com)</b>
+      </p>
+
+
+
+      <input
+        class="input_text"
+        type="password"
+        placeholder="Enter your Password"
+        formControlName="password">
+    <p *ngIf="password.hasError('required')&& (password.dirty || password.touched)" style="color: RED;text-align: center"><b>Password is Required</b></p>
+      <p *ngIf="password.hasError('pattern')"
+         style="color: Red;text-align: center">
+        <b>Password is Invalid
+          Password must contain Atleast 8 characters, one Lowercase and one upper case</b>
+      </p>
+
+
+      <input
+        class="input_text"
+        type="password"
+        placeholder="Confirm your Password"
+        formControlName="confirm_password">
+      <p *ngIf="confirm_password.dirty &&
+                confirm_password.hasError('NoPassswordMatch')">Passwords Not match</p>
+
+
+    <input
+      class="input_text"
+      type="text"
+      placeholder="Enter your Address"
+      formControlName="address">
+
+    <div class="sideinput">
+      <label style="color: white" > Title Select </label>
+      <div class="inputdiv">
+        <p  class="checkbox">
+          <input style="color:red" type="radio" [value]="false" formControlName="title"> <b style="color: black"> Mr. </b>
+          <input type="radio" [value]="true" formControlName="title"> <b style="color: black"> Mrs. </b>
+        </p>
+      </div>
+    </div>
+
+    <label style="color:white;margin-left: 30px"> Upload Image </label>
+    <img
+      class="input_text"
+      [src]="UserImage.value"
+      alt=" " *ngIf="UserImage.value">
+      <input type="file" (change)="readUrl($event)"
+           style="height:20%;width:20%;margin-left: 2px;margin-top: 20px">
+
+     <div class="mybuttons">
+
+       <button class="btn btn-success" (click)="submit(formGroup)"
+          [disabled]="formGroup.invalid" >SIGNUP
+       </button>
+
+       <button class="btn btn-success"
+            routerLink="/login" >LOGIN
+       </button>
+
+
+  </div>
+  </div>
+</form>
+
+

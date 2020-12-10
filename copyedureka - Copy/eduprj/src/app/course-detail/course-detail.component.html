@@ -1,0 +1,25 @@
+<div *ngIf="course">
+    <h2>{{course.name | uppercase}} Details</h2>
+
+
+  <div><span>ID: </span>
+        {{course.id}}</div>
+
+        <div>
+          <label (dblclick)="btnClick.emit(course.name)">
+              Name: <input [(ngModel)]="course.name"
+                placeholder="name"/>
+            </label>
+        </div>
+
+</div>
+
+<!--<label (click)="btnClick.emit('hey')">-->
+<!--<label (click)="callevent('HEY')">-->
+
+
+<!--<p>Add Value : {{6 | addPipe}}</p>-->
+<!--<p>Take exponential value: {{2 | expoPipe: 5}}</p>-->
+<p>Course Id After applying add Pipe:<b>{{course.id |addPipe}}</b></p>
+<p>Course Id After applying expo Pipe (Power of 5):<b>{{course.id |expoPipe:5}}</b></p>
+

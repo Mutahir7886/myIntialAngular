@@ -1,0 +1,49 @@
+<h1>Angular Google Maps (AGM) Demo</h1>
+<button class="btn btn-primary" (click)="access()">ACCESS </button>
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker
+    *ngFor="let m of markers; let i = index"
+    (markerClick)="clickedMarker(m.label, i, m.lat, m.lng)"
+    [latitude]="m.lat"
+    [longitude]="m.lng"
+    [label]="m.label"
+    [markerDraggable]="m.draggable"
+    [iconUrl]="'//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"
+
+    (dragEnd)="markerDragEnd(m, $event)">
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+      <strong>The Latitude of the marked place: </strong> {{latmarked}}
+      <br>
+      <strong>The Longitude of the marked place: </strong> {{lngmarked}}
+      <br>
+      <strong>The Label of User: </strong> {{labelmarked}}
+
+
+    </agm-info-window>
+  </agm-marker>
+
+  <agm-marker
+
+    [latitude]="lat"
+    [longitude]="lng"
+    >
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+  </agm-marker>
+
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
+              [radius]="50"
+              [fillColor]="'blue'"
+              [circleDraggable]="true"
+              [editable]="true">
+  </agm-circle>
+
+</agm-map>

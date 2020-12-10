@@ -1,0 +1,21 @@
+<script src="../../shared/services/actionService.ts"></script>
+<button style="margin-left: 45px;background-color: yellow" (click)="CHK()">CHCK COVID</button>
+
+<ul >
+  <p><b >COVID COUNTRIES</b></p>
+  <div class="covid" *ngFor="let item of covid"
+
+       infiniteScroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollUpDistance]="1.5"
+       [infiniteScrollThrottle]="150"
+       (scrolled)="onScrollDown()"
+       (scrolledUp)="onScrollUp()"
+  >
+    <div ><b style="color: black"> COUNTRY--</b>{{item.Country}}
+      <div><b style="color: black"> CASES--</b>{{item.TotalConfirmed}}
+      </div>
+    </div>
+  </div>
+</ul>
+

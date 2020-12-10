@@ -1,0 +1,145 @@
+.maindiv{
+  margin-top: 80px;
+  margin-left: 220px;
+  margin-right: 220px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+/*.cart_items{*/
+/*  border-radius: 25px;*/
+/*  background-color: honeydew;*/
+/*  margin-bottom: 20px;*/
+/*  border-bottom: black;*/
+/*  flex-basis: 20%;*/
+/*  flex-grow: 1;*/
+/*  margin-right: 20px;*/
+/*  margin-left: 30px;*/
+/*}*/
+
+.cart_items{
+  border-radius: 25px;
+  background-color: #231E39;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+  position: relative;
+  padding: 30px 0 0;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+  border-bottom: black;
+  flex-basis: 20%;
+  flex-grow: 1;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+
+.cart_items h2 {
+  margin: 10px 0;
+  color: white;
+  font-family: "Times New Roman";
+}
+
+.cart_items p {
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cart_items img {
+  border: 1px solid #C400D7;
+  border-radius: 50%;
+  padding: 7px;
+  height: 120px;
+  width: 120px;
+}
+
+/*.cart_items h3:hover{*/
+/*  background-color: red;*/
+/*}*/
+.btn-success{
+  justify-content: center;
+  text-align: center;
+  background-color: #C400D7;
+  border: 1px solid #C400D7;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.btn-success2{
+  justify-content: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background-color:red ;
+  color: white;
+}
+.selectedPrd {
+  background-color: darkmagenta;
+}
+
+.NotselectedPrd{
+  background-color: honeydew;
+}
+
+.viewcartbox{
+  background-color: black;
+  display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.input_text {
+  background-color: white;
+  color: white;
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 10px;
+}
+
+
+
+
+button.primary {
+  background-color: #C400D7;
+  border: 1px solid #C400D7;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+
+button.primary1 {
+  background-color: #C400D7;
+  border: 1px solid #C400D7;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+
+button.primary1:hover {
+  background-color: red;
+}
+
+button.primary:hover {
+  background-color: black;
+  border: 1px solid black;
+}

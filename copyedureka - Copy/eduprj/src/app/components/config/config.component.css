@@ -1,0 +1,13 @@
+.ABCACA {
+  align-content: center;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 50px;
+  position: center;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.btn-info{
+  margin-top: 20px;
+}

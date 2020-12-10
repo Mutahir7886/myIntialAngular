@@ -1,0 +1,29 @@
+.styleL {
+  margin-left: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.styleP{
+  margin-left: 20px;
+  font-weight: bold;
+}
+.ng-select.ABC {
+  margin-left: 20px;
+  width: 70%;
+}
+
+
+agm-map {
+  height: 300px;
+  width: 400px;
+}
+
+
+* {
+  font-family: Lato;
+}
+
+a {
+  color: darkblue;
+}

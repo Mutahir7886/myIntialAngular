@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="564f1dd4-7a59-4d2b-8087-8e225742cb60" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/copyedureka - Copy/eduprj/.editorconfig" previewFile="$PROJECT_DIR$/copyedureka - Copy/eduprj/src/app/components/homecart/homecart.component.ts" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/copyedureka - Copy" />
+  </component>
+  <component name="ProjectId" id="1fz7QuLYCQSjUlGWIqctfFzaYYI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ionic Test" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="ts.external.directory.path" value="D:\backup programming data\mutahir data\angular data\wednesday task\copyedureka - Copy\eduprj\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mutah\Desktop\Devstudio\frontend\wednesday task\copyedureka - Copy\eduprj\src\environments" />
+      <recent name="C:\Users\mutah\Desktop\Devstudio\frontend\wednesday task\copyedureka - Copy\eduprj\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="564f1dd4-7a59-4d2b-8087-8e225742cb60" name="Default Changelist" comment="" />
+      <created>1597209054362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597209054362</updated>
+      <workItem from="1597209055438" duration="8000" />
+      <workItem from="1597642948619" duration="32504000" />
+      <workItem from="1597725850032" duration="10149000" />
+      <workItem from="1597741531972" duration="8603000" />
+      <workItem from="1597750518733" duration="6043000" />
+      <workItem from="1597770937448" duration="346000" />
+      <workItem from="1597771301052" duration="7035000" />
+      <workItem from="1597779114976" duration="315000" />
+      <workItem from="1597816647426" duration="10131000" />
+      <workItem from="1597832266179" duration="405000" />
+      <workItem from="1597832689901" duration="3131000" />
+      <workItem from="1597835857255" duration="5929000" />
+      <workItem from="1597849447266" duration="3225000" />
+      <workItem from="1597854235961" duration="599000" />
+      <workItem from="1597898447922" duration="1784000" />
+      <workItem from="1597904012096" duration="9521000" />
+      <workItem from="1597919797758" duration="26883000" />
+      <workItem from="1597984373899" duration="24135000" />
+      <workItem from="1598243766238" duration="25761000" />
+      <workItem from="1598279728336" duration="4847000" />
+      <workItem from="1598284632780" duration="185000" />
+      <workItem from="1598333375437" duration="21811000" />
+      <workItem from="1598421703481" duration="18613000" />
+      <workItem from="1598445763345" duration="2489000" />
+      <workItem from="1598454299321" duration="3945000" />
+      <workItem from="1598458374824" duration="285000" />
+      <workItem from="1598503369825" duration="17442000" />
+      <workItem from="1598532762425" duration="701000" />
+      <workItem from="1598591443337" duration="22359000" />
+      <workItem from="1598848861998" duration="3393000" />
+      <workItem from="1598853154399" duration="4416000" />
+      <workItem from="1598858000625" duration="8767000" />
+      <workItem from="1598869835401" duration="2307000" />
+      <workItem from="1598872282022" duration="6207000" />
+      <workItem from="1598935206273" duration="32759000" />
+      <workItem from="1599021959761" duration="80000" />
+      <workItem from="1599022106104" duration="14000" />
+      <workItem from="1599022142779" duration="49000" />
+      <workItem from="1599022211704" duration="179000" />
+      <workItem from="1599022410183" duration="29000" />
+      <workItem from="1599023285134" duration="51000" />
+      <workItem from="1599023378925" duration="23866000" />
+      <workItem from="1599069053942" duration="2798000" />
+      <workItem from="1599107868700" duration="41813000" />
+      <workItem from="1599197344974" duration="15314000" />
+      <workItem from="1599305025473" duration="2340000" />
+      <workItem from="1599453590816" duration="14924000" />
+      <workItem from="1602149203124" duration="7000" />
+      <workItem from="1605527016933" duration="3000" />
+      <workItem from="1605527123509" duration="728000" />
+      <workItem from="1606478015660" duration="2813000" />
+      <workItem from="1606714107841" duration="20480000" />
+      <workItem from="1606816108755" duration="158000" />
+      <workItem from="1606825119539" duration="593000" />
+      <workItem from="1606886668255" duration="2513000" />
+      <workItem from="1606894165803" duration="1334000" />
+      <workItem from="1606899071429" duration="1942000" />
+      <workItem from="1606901289248" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606901297956">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606901297956" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1599023666920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599023666920" />
+    <state x="390" y="99" width="585" height="530" key="find.popup" timestamp="1606723072657">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="99" width="585" height="530" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606723072657" />
+    <state x="459" y="136" key="refactoring.ChangeSignatureDialog" timestamp="1598335729051">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="459" y="136" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1598335729051" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606737503585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606737503585" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599477640100">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599477640100" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/copyedureka - Copy/eduprj/src/app/components/selectbyuser/selectbyuser.component.ts</url>
+          <line>182</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
